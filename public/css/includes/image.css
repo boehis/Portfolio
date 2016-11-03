@@ -1,0 +1,32 @@
+.nav-fix #image {
+    margin-top: 6.6rem;
+}
+
+.image {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.imagenav {
+    left: 50%;
+    transform: translate(-50%, 0);
+    margin-top: -2rem;
+    position: absolute;
+}
+
+.bullet {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 100%;
+    background-color: #eee;
+    opacity: 0.4;
+    float: left;
+    margin: 0.1rem;
+}
+
+.activbullet {
+    opacity: 0.8;
+}

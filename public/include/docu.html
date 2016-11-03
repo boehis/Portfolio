@@ -1,0 +1,86 @@
+<h2>Documentation</h2>
+<p>Hier folgt die Dokumentation meines Arbeitsprozesses. Ich arbeitete immer wieder Zuhause am Protfolio. Für diese Einheiten habe ich keinen separaten Eintrag erstell. Sie sind einfach zum Eintrag der letzten Schulstunde hinzugefügt.</p>
+<div class="row">
+    <div class="six columns">
+        <h4>09. September</h4>
+        <p>
+            Heute erhielten wir den Auftrag ein Portfolio zu erstellen. Die Vorgaben sind einfach. Wir müssen eine Webseite mit HTML5 , CSS3 und JavaScript erstellen. Den Inhalt werden verschiedene Multimediainhalte darstellen. Diese sind Bild, Sound und Film.
+        </p>
+        <p>
+            Als erstes überlegte ich mir welche Umgebung ich verwenden will. Ich entschied mich für folgende:
+            <ul>
+                <li>Atom als moderner und simpler Texteditor</li>
+                <li>node.js als Webserver</li>
+                <li>JQuery als js library</li>
+                <li>Skeleton zum stylen der seite</li>
+            </ul>
+            Da Atom, node.js und Skeleton für mich neu waren, verbrachte ich den rest des Morgens damit, den Editor zu konfigurieren, node zum laufen zu bringen und die dokumentation von Skeleton zu studieren.
+        </p>
+        <p>
+            Für das Design der Webseite, liess ich mich etwas von der Skeleton homepage inspirieren (vorallem bei der Navigation). !Der Code ist jedoch nicht kopiert! Nun erstellte ich das Grundgerüst der Webseite. Fullscreen header und footer und platzhalter für
+            die Inhalte. Dann erstellte ich die Navigation. Die idee ist, dass man dem content eine Klasse 'nav-fix' hinzufügen kann und dass die Navigation dann an dem Kopf der Seite fixiert wird. Bis dies jedoch schön funktioniert hat, bastelte ich
+            eine Weile. Dank JQuery kann ich das scrollen schön animieren und das hinzufügen der 'nav-fix' Klasse kontrolieren.
+        </p>
+    </div>
+    <div class="six columns">
+        <h4>16. September</h4>
+        <p>
+            Da das Grundgerüst der Webseite nun stand, machte ich mich ans sammeln der Inhalte. Bilder habe ich genug, denn ich mache gerne Fotos. Auf meiner Nikon habe ich ausgewählt, dass Bilder im RAW format gespeichert werden sollen. Für die Webseite komprimierte
+            ich sie in jpeg dateien. Ich fand sogar ein Bild auf meinem Handy (erstes in der slideshow) welches mir ausgesprochen geviel. Um die Bilder ins gleiche Format zu bringen verwendete ich gimp. Als kleine spielerei versuchte ich, den Hintergrund
+            aus einem der Bilder zu entfernen. Das Resultat ist nun das Icon, oben beim Tab der webseite
+        </p>
+        <p>
+            Leider habe ich keine eigenen Sounddateien. Daher musste ich mir welche vom Internet holen. Ich stellte fest, dass Soundcloud direkt auf der Seite einbinden kann. Ich nahm mir vor, dies zu tun. Mit der Webseite <a href="http://anything2mp3.com/">anything2mp3</a>            konnte ich mp3 von Soundcloud herunterladen.
+        </p>
+        <p>
+            Bei den Vides konnte ich wieder eigenes Material verwenden. Ein cooles slow-mo Video, welches ich letzten Winter aufgenommen habe begeisterte mich. Auf dem iPhone wählte ich welcher Bereich des Videos verlangsamt sein soll. Da der Clip jedoch hochkant
+            ist und das nicht so toll aussieht auf der Webseite, entschied ich mich ihn mit dem Tool CropVS zuzuschneiden.
+        </p>
+    </div>
+</div>
+<div class="row">
+    <div class="six columns">
+        <h4>23. September</h4>
+        <p>
+            Nun folgte der warscheindlich mühsamste teil. Die Slideshow. Ich hatte lange bis die Bilder in einer zufriedenstellenden Grösse angezeigt wurden und dass auch, wenn man das Fenster kleiner macht. Die navigations Punkte sollen dynamisch nach der Anzahl
+            Bilder in der Slideshow generiert werden. Ein Timer schaltet alle 3 sekunden zum nächsten Bild.
+        </p>
+        <p>
+            Als die Slideshow geschafft war, ging ich weiter zum Sound. Hier band ich einfach die heruntergeladenen Dateien ein und kopierte den Link für den iframe von Soundcloud.
+        </p>
+        <p>
+            Das einbinden vom clip vom Snowboarden ging ebenfalls rasch. Youtube videos kann man ebenfalls als iframes einbinden. Diesesmal war es etwas mühsamer weil ich mit der standart grösse nicht zufrieden war und dort noch etwas rumschrauben musste.
+        </p>
+        <p>
+            Für den scroll down Link über dem Titelbild der Seite nahm ich mir etwas mehr zeit. Als erstes kreierte ich die Pfeile. Das sind div Elemente, die um 45 Grad rotiert sind und einen Rahmen haben. Für die blinkende Animation verwendete ich nicht JavaScript
+            sondern CSS3. Bis das schön flüssig funktionierte, wie ich es wollte, dauere es einige Zeit und erforderte viel pröbeln.
+        </p>
+        <p>
+            Den footer habe ich bereits vor einiger zeit erstellt und daher konnte ich diesen Code kopieren. Damals liess ich mich von Patricks Webseite inspirieren. Einmal mehr habe ich den Code NICHT kopiert, sondern selbs nachgebaut.
+        </p>
+    </div>
+    <div class="six columns">
+        <h4>28. Oktober</h4>
+        <p>
+            Die Webseite war nun grundsätzlich fertig. Nun musste ich noch hier und da änderungen vornehmen, bugs beheben und nebenbei musste ich die Slideshow komoplett neu machen, weil ich mit dem bisherigen Resultat nicht mehr zufrieden war.
+        </p>
+        <p>
+            Als letzten schritt teilte ich das index file in auf und lagerte die inhalte und die navigation in seperate files aus. Normalerweise würde ich die Einbindung dieser Files mit JSP oder ähnlichem machen, das aber nicht verwenden sollen, entschied ich mich,
+            die Einbindung per js zu machen. Dazu gab ich jedem div das einen inhalt haben soll die klasse include und ein data-src attribute. HTML5 lässt uns allen Elementen eigene Attribute mit data-* hinzufügen. Mit js las ich dann dieses data-src
+            attribut aus und benutzte load um die files rein zu laden. Anfangs machte ich dies in der document.ready funktion. Das Problem war dann, dass ich die neu geladenen Elemente nicht über jquery anwählen konnte. Die lösung für das Problem ist
+            simpel, einfach die load funktion aus der document.ready funktion herausnehmen. Biss ich jedoch auf diese Lösung gekommen bin, dauerte es eine gefühlte Ewigkeit.
+        </p>
+        <p>
+            Entsprechend zum index file teilte ich auch das css file auf. Für die Slideshow erstellte ich ein Objekt in einem separaten file. Nun ist alles viel übersichtlcher. Ich gab der Webseite noch den letzten schliff und fertig war sie. Ich testete meine webseite
+            noch auf dem Handy mit Chrome und Safari und auf dem Desktop mit Chrome, Firefox und Edge. Den code versehe ich nur selten mit Kommentaren, denn ich versuche ihn sauber und klar zu halten, sodass er selbstsprechend ist.
+        </p>
+    </div>
+</div>
+<div class="row">
+    <h4>Schlussreflexion</h4>
+    <p>
+        Ich bin nun zufrieden mit meiner Leistung. Ich habe auch relativ viel Arbeit in das Protfolio gesteckt. Für ein nächstes Mal werde ich mir für Dinge wie die Slideshow einmal Zeit nehmen es sauber zu lösen und dann die Finger davon lassen, statt immer
+        wieder etwas rumbasteln und am Ende alles wiederholt neu zu schreiben. Was ich auch nicht stark berücksichtigt habe ist Performance. Besonders für eine Webseite die online gehen sollte, müsste ich daran noch arbeiten. Alles in allem gefällt mir
+        das Design der Webseite am meisten.
+    </p>
+</div>

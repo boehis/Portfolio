@@ -1,0 +1,114 @@
+#header {
+    /*Image downloaded from pixbay*/
+    background-image: url("../../images/head-image.jpg");
+    background-size: cover;
+}
+
+.title {
+    padding-top: 25vh;
+    font-size: 8rem;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.center {
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: inherit;
+}
+
+.scrolldown {
+    position: absolute;
+    bottom: 0;
+}
+
+.scroll-link {
+    color: #fff;
+}
+
+.scroll-link:hover {
+    opacity: 0.7;
+    background-color: #eee;
+}
+
+.scroll-link:hover>div>div {
+    border-color: #0FA0CE;
+}
+
+.arrow-down {
+    border-right: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    transform: rotate(45deg);
+    width: 3rem;
+    height: 3rem;
+    margin-bottom: -2rem;
+}
+
+.scroll-text {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+
+.transition-0_5 {
+    -o-transition: .5s;
+    -ms-transition: .5s;
+    -moz-transition: .5s;
+    -webkit-transition: .5s;
+    transition: .5s;
+}
+
+.blink-children>div {
+    opacity: 0.2;
+    -webkit-animation: blink .6s linear infinite;
+    -moz-animation: blink .6s linear infinite;
+    -o-animation: blink .6s linear infinite;
+    animation: blink 2.1s linear infinite;
+}
+
+.blink-children :nth-child(2) {
+    animation-delay: .4s
+}
+
+.blink-children :nth-child(3) {
+    animation-delay: .8s
+}
+
+@keyframes blink {
+    10% {
+        opacity: 1;
+    }
+    60% {
+        opacity: 0.2;
+    }
+}
+
+@-webkit-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@-moz-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@-o-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}

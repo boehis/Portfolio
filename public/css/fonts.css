@@ -1,0 +1,24 @@
+/*main font*/
+@font-face {
+    font-family: "SourceSansPro";
+    src: url("../fonts/SourceSansPro-Regular.otf");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "SourceSansPro";
+    src: url("../fonts/SourceSansPro-Light.otf");
+    font-weight: lighter;
+}
+/*backup font*/
+@font-face {
+    font-family: "Raleway";
+    src: url("../fonts/Raleway-Regular.ttf");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Raleway";
+    src: url("../fonts/Raleway-Light.ttf");
+    font-weight: lighter;
+}

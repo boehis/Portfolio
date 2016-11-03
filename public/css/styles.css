@@ -1,0 +1,33 @@
+a {
+    text-decoration: none;
+}
+
+.fullscreen {
+    height: 100vh;
+}
+
+.container {
+    max-width: 800px;
+}
+
+.section {
+    padding-top: 6.6rem;
+}
+
+.code {
+    overflow-x: auto;
+    white-space: nowrap;
+    font: normal 10pt Consolas, Monaco, monospace;
+}
+
+.box-shadow {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.width-100 {
+    width: 100%;
+}
+
+.margin-0 {
+    margin: 0;
+}
